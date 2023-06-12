@@ -8,4 +8,12 @@ const gallery = galleryItems
   .join("");
 const pageGallery = document.querySelector(".gallery");
 pageGallery.insertAdjacentHTML("beforeend", gallery);
+
+pageGallery.addEventListener("click", selectImage);
+function selectImage(event) {
+  if (event.target.nodeName !== "LI") {
+    return;
+  }
+}
+
 console.log(galleryItems);
