@@ -1,7 +1,5 @@
 import { galleryItems } from "./gallery-items.js";
 // Change code below this line
-const basicLightbox = require("basiclightbox");
-import * as basicLightbox from "basiclightbox";
 const gallery = galleryItems
   .map(
     (galleryItem) =>
@@ -21,7 +19,7 @@ function selectImage(event) {
 
 const instance = basicLightbox.create(`
     <div class="gallery__item">
-    <a class="gallery__link" href="${galleryItem.original}"><img class="gallery__image" src="${galleryItem.original}" data-source="${galleryItem.original}" alt="${galleryItem.description}"/></a>
+    <a class="gallery__link" href="${galleryItems.original}"><img class="gallery__image" src="${galleryItems.original}" data-source="${galleryItems.original}" alt="${galleryItems.description}"/></a>
     </div>
 `);
 
