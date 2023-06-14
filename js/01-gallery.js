@@ -14,18 +14,21 @@ pageGallery.insertAdjacentHTML("beforeend", gallery);
 
 pageGallery.addEventListener("click", (e) => {
   e.preventDefault();
+  if (e.target.nodeName !== "IMG") return;
+
   const instance = basicLightbox.create(
     `<img src="${e.target.dataset.source}">`,
     {
-      onClose: (instance) => {
-        document.addEventListener("keydown", escapeFunc);
+      onShow: (instance) => {
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape")
+            instance.close(() =>
+              document.removeEventListener("keydown", "Escape")
+            );
+        });
       },
     }
   );
+
   instance.show();
-  const escapeFunc = (e) => {
-    if (e.key === "Escape") {
-      instance.close();
-    }
-  };
 });
