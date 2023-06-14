@@ -1,5 +1,7 @@
 import { galleryItems } from "./gallery-items.js";
 // Change code below this line
+console.log(galleryItems);
+
 const gallery = galleryItems
   .map(
     (galleryItem) =>
@@ -25,4 +27,3 @@ const instance = basicLightbox.create(`
 
 instance.show();
 const visible = instance.visible();
-console.log(galleryItems);
