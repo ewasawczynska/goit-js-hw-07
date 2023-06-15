@@ -21,10 +21,14 @@ pageGallery.addEventListener("click", (e) => {
     {
       onShow: (instance) => {
         document.addEventListener("keydown", (e) => {
-          if (e.key === "Escape")
-            instance.close(() =>
-              document.removeEventListener("keydown", "Escape")
-            );
+          if (e.key === "Escape") instance.close();
+        });
+      },
+    },
+    {
+      onClose: (instance) => {
+        document.removeEventListener("keydown", (e) => {
+          if (e.key === "Escape") instance.close();
         });
       },
     }
