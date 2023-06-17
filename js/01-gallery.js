@@ -24,8 +24,6 @@ pageGallery.addEventListener("click", (e) => {
           if (e.key === "Escape") instance.close();
         });
       },
-    },
-    {
       onClose: (instance) => {
         document.removeEventListener("keydown", (e) => {
           if (e.key === "Escape") instance.close();
