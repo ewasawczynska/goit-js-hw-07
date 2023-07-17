@@ -1,5 +1,11 @@
 https://ewasawczynska.github.io/goit-js-hw-07/
 
+Java Script. Moduł 07 - Delegacja zdarzeń i throttle/debounce oraz lazyload
+
+- galeria obrazów basicLightbox
+- biblioteka simplelightbox (cdn)
+
+
 Kryteria przyjęcia
 
 Utworzono repozytorium goit-js-hw-07.
